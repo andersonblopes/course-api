@@ -6,10 +6,10 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface CourseRepository extends CrudRepository<Course, String> {
 
-	public List<Course> findByTopiciD(String topicId);
+	public List<Course> findByTopicId(String topicId);
 
 	public List<Course> findByName(String name);
 
-	public List<Course> findByDescription(String Description);
+	public List<Course> findByDescription(String description);
 
 }
