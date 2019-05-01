@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
@@ -36,8 +35,8 @@ public class TopicController {
 	}
 
 	@PutMapping("/{id}")
-	public void updateTopic(@RequestBody Topic topic, @PathVariable String id) {
-		topicService.updateTopic(id, topic);
+	public void updateTopic(@RequestBody Topic topic) {
+		topicService.updateTopic(topic);
 	}
 
 	@DeleteMapping("/{id}")
